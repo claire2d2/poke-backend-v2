@@ -6,5 +6,7 @@ router.get("/", (req, res, next) => {
   res.json("All good in here");
 });
 
+router.use("/auth", require("./auth.routes.js"));
+
 router.use("/pokemon", require("./pokemon.routes.js"));
 module.exports = router;
